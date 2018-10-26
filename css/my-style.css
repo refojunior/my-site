@@ -176,6 +176,11 @@ header.masthead .device-container .screen img {
   }
 }
 
+.my-logo {
+	width: 125px;
+	border-radius:20px;
+}
+
 .i-do-section{
 	padding-top: 60px;
 	padding-bottom:30px;
