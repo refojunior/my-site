@@ -112,7 +112,11 @@ margin-bottom: 30px;
 
     <script>
     	$(document).ready(function() {
-			$('.progress-title').waypoint(function() {
-			$('.progress-title').fadeIn(2500);
-			}, { offset: '50%' }); });
+            $('.progress-bar').waypoint(function() {
+            $('.progress-bar').css({
+            animation: "animate-positive 2s",
+            opacity: "1"
+            });
+            }, { offset: '75%' });
+        });
     </script>

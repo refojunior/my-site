@@ -19,6 +19,7 @@
 	<!-- my custom CSS -->
 	<link rel="stylesheet" href="css/my-style.css">
 </head>
+
 <body>
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -52,12 +53,12 @@
 		</div>
 	</nav>
 
-	<header class="masthead" style="height: 100vh">
+	<header class="masthead" >
 		<div class="container h-100">
 			<div class="row h-100">
 				<div class="col-lg-12 my-auto">
 					<div class="header-content" style="float:right">
-						<h1>Welcome to my site</h1>
+						<h1>Welcome to My Site</h1>
 						<hr>
 						<p align="justify">Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion. My dream is become a professional software engineer. </p>
 					</div>
@@ -67,8 +68,8 @@
 		</div>
 	</header>
 
-	<section>
-		<div class="container" id="service" style="display: none;">
+	<section id="service" >
+		<div class="container"  >
 			<div class="row">
 				<div class="col-md-4 mx-auto i-do-section" align="center">
 					<h1>What I do?</h1>
@@ -102,16 +103,69 @@
 			</div>
 		</div>
 	</section>
+	<div class="breaker"></div>
 	<br>
 	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 mx-auto i-do-section" align="center">
-					<h1>My Skills</h1>
+		<div class="skills">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 mx-auto i-do-section" align="center">
+						<h1>My Skills</h1>
+					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="content-service">
+							<h2>HTML</h2>
+							<div class="progress">
+							 	<div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+							</div>
+						</div>
+						
+						<div class="content-service">
+							<h2>CSS</h2>
+							<div class="progress">
+							 	<div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
+							</div>
+						</div>
+
+						<div class="content-service">
+							<h2>Javascript</h2>
+							<div class="progress">
+							 	<div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="content-service">
+							<h2>PHP</h2>
+							<div class="progress">
+							 	<div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+							</div>
+						</div>
+
+						<div class="content-service">
+							<h2>MySql</h2>
+							<div class="progress">
+							 	<div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+							</div>
+						</div>
+
+						<div class="content-service">
+							<h2>Ajax</h2>
+							<div class="progress">
+							 	<div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="breaker"></div>
+				
 			</div>
-		</div>
+		</div>		
 	</section>
+	
+	
 
 	
 
@@ -122,11 +176,10 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-   
-
-
+    <script src="js/jquery.waypoints.min.js"></script>
+  
     <!-- Custom scripts for this template -->
     <script src="js/my.js"></script>
-
+	
 </body>
 </html>
