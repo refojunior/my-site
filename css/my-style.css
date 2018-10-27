@@ -176,7 +176,8 @@ header.masthead .device-container .screen img {
   }
 
   .breaker {
-    padding-bottom: 45px;
+    padding-bottom: 65px;
+    background-color: #f2f2f2;
   }
 
   #service {
@@ -199,10 +200,16 @@ header.masthead .device-container .screen img {
 	padding-bottom:30px;
 }
 
+#service {
+   background-color: #f2f2f2;
+ 
+}
+
 
 .service {
 	padding-top: 20px;
 	font-family: 'Crete Round', serif;
+
 }
 
 .skills {

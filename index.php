@@ -67,7 +67,8 @@
 			</div>
 		</div>
 	</header>
-
+	
+	<!-- service section -->
 	<section id="service" >
 		<div class="container"  >
 			<div class="row">
@@ -103,8 +104,10 @@
 			</div>
 		</div>
 	</section>
+
 	<div class="breaker"></div>
-	<br>
+	
+	<!-- skills section -->
 	<section>
 		<div class="skills">
 			<div class="container">
@@ -159,7 +162,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="breaker"></div>
+				<br><br><br>
 				
 			</div>
 		</div>		
