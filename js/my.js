@@ -20,6 +20,9 @@ $(document).ready(function() {
       }); 
   
   });
+
+  //slide down
+  $(".header-content").slideDown(1200);
       
 });
 
@@ -34,8 +37,6 @@ $(document).ready(function() {
 
 
 (function($) {
-  "use strict"; // Start of use strict
-
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {

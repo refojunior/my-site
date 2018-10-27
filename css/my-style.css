@@ -139,8 +139,14 @@ header.masthead .header-content {
   margin-bottom: 100px;
   text-align: center;
   background-color: white;
-  color:#222222;
+  opacity: 0.7;
   padding:15px;
+  float:right; display: none
+}
+
+header.masthead .header-content .text-box {
+  text-align: justify;
+  color: black
 }
 
 header.masthead .header-content h1 {
@@ -176,7 +182,7 @@ header.masthead .device-container .screen img {
   }
 
   .breaker {
-    padding-bottom: 65px;
+    padding-bottom: 80px;
     background-color: #f2f2f2;
   }
 
@@ -271,6 +277,145 @@ header.masthead .device-container .screen img {
     0% { width: 0%; }
 }
 
+#portfolio .portfolio-item {
+  right: 0;
+  margin: 0 0 15px;
+  
+}
+
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgb(255,0,0, 0.6);  
+
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+}
 
 
 
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+
+
+#portfolio .portfolio-item .portfolio-caption p {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#portfolio * {
+  z-index: 2;
+}
+
+#article {
+   background-color: #f2f2f2;
+ 
+}
+
+
+
+#article {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#article #article-wrapper {
+  padding-right: 15px;
+}
+
+
+
+
+
+
+#article .article-item {
+  position: relative;
+  height: 300px;
+  overflow: hidden !important;
+  margin-bottom: 15px;
+  transition: all 350ms ease;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+#article .article-item a {
+  display: block;
+  margin-right: 15px;
+}
+
+#article .article-item img {
+  position: relative;
+  top: 0;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#article .article-item .details {
+  
+  background: #E43C5C;
+  position: absolute;
+  width: 100%;
+  height: 180px;
+  bottom: -50px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#article .article-item .details h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 0 2px 8px;
+  margin: 0;
+}
+
+#article .article-item .details span {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+#article .article-item:hover .details {
+  bottom: 0;
+}
+
+#article .article-item:hover img {
+  top: -30px;
+}

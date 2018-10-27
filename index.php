@@ -57,10 +57,10 @@
 		<div class="container h-100">
 			<div class="row h-100">
 				<div class="col-lg-12 my-auto">
-					<div class="header-content" style="float:right">
+					<div class="header-content">
 						<h1>Welcome to My Site</h1>
 						<hr>
-						<p align="justify">Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion. My dream is become a professional software engineer. </p>
+						<p class="text-box">Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion. My dream is become a professional software engineer. </p>
 					</div>
 				</div>
 				
@@ -105,15 +105,16 @@
 		</div>
 	</section>
 
-	<div class="breaker"></div>
+	<div class="breaker"><br></div>
 	
 	<!-- skills section -->
 	<section>
 		<div class="skills">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 mx-auto i-do-section" align="center">
+					<div class="col-md-8 mx-auto i-do-section" align="center">
 						<h1>My Skills</h1>
+						<p style="color:white">I'm often using Codeigniter, Laravel, Bootstrap, jQuery in my project</p>
 					</div>
 				</div>
 				<div class="row">
@@ -168,6 +169,93 @@
 		</div>		
 	</section>
 	
+	<!-- portfolio section -->
+	<section id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto i-do-section" align="center">
+					<h1>My Portfolio</h1>
+					<p>Not only that, I also contributed to many other projects related to the website development</p>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-4 portfolio-item">
+					<a href="#" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fas fa-eye fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" alt="portfolio1" src="img/port-cwa.jpg">
+					</a>
+					<div class="portfolio-caption">
+						<h2>PT. Citra Warna</h2>
+						<p class="text-muted">Website Company</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 portfolio-item">
+					<a href="#" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fas fa-eye fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" alt="portfolio1" src="img/port-bms.jpg">
+					</a>
+					<div class="portfolio-caption">
+						<h2>Bali Massive Shuffle</h2>
+						<p class="text-muted">Website Profile Community</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 portfolio-item">
+					<a href="#" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fas fa-eye fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" alt="portfolio1" src="img/port-miae.jpg">
+					</a>
+					<div class="portfolio-caption">
+						<h2>Miae App</h2>
+						<p class="text-muted">Website Application</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-3 mx-auto" align="center">
+					<button class="btn btn-block btn-outline-danger">See More</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br><br>
+	<!-- article section -->
+	<section id="article">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto i-do-section" align="center">
+					<h1>My Recent Articles</h1>
+				</div>
+			</div>
+			<div class="row" id="article-wrapper">
+		        <div class="col-lg-4 col-md-6 article-item filter-app">
+		          	<a href="">
+		            	<img src="img/carousel.jpg" alt="">
+		            	<div class="details">
+		              		<h4>App 1</h4>
+		              		<span>Alored dono par</span>
+		            	</div>
+		          	</a>
+		        </div>
+			</div>
+		</div>
+		
+	</section>
 	
 
 	
