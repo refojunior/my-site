@@ -284,11 +284,110 @@
 					<button class="btn btn-block btn-outline-danger">See More</button>
 				</div>
 			</div>
-
+			<br><br>
 		</div>
-		
 	</section>
-	
+
+	<!--  -->
+	<section class="invited">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="">
+						<h1>Have Some Interesting Project?</h1>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+
+
+	<!-- Contact -->
+    <section id="contact">
+      	<div class="container">
+        	<div class="row">
+          		<div class="col-lg-12 text-center">
+            		<h1>Contact Me</h1>
+           
+          		</div>
+        	</div>
+	        <div class="row">
+	          	<div class="col-lg-12">
+	            	<form id="contactForm" name="sentMessage">
+	              		<div class="row">
+	                		<div class="col-md-6">
+	                  			<div class="form-group">
+				                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" >
+				                    <p class="help-block text-danger"></p>
+	                  			</div>
+	                  			<div class="form-group">
+				                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" >
+				                    <p class="help-block text-danger"></p>
+	                  			</div>
+	                  			<div class="form-group">
+				                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" >
+				                    <p class="help-block text-danger"></p>
+	                  			</div>
+	                  
+	                		</div>
+	                		<div class="col-md-6">
+	                  			<div class="form-group">
+				                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+				                    <p class="help-block text-danger"></p>
+	                  			</div>
+	                		</div>
+	                		<div class="col-lg-12 text-center">
+	                  
+	                  			<button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+	                		</div>
+	              		</div>
+	            	</form>
+	          	</div>
+	        </div>
+      	</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Your Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 	
 
