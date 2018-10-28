@@ -105,7 +105,7 @@
 		</div>
 	</section>
 
-	<div class="breaker"><br></div>
+	<div class="breaker"></div>
 	
 	<!-- skills section -->
 	<section>
@@ -114,7 +114,7 @@
 				<div class="row">
 					<div class="col-md-8 mx-auto i-do-section" align="center">
 						<h1>My Skills</h1>
-						<p style="color:white">I'm often using Codeigniter, Laravel, Bootstrap, jQuery in my project</p>
+						<p style="color:white">I'm often using Codeigniter, Laravel, Bootstrap, jQuery and others to my projects</p>
 					</div>
 				</div>
 				<div class="row">
@@ -242,17 +242,49 @@
 					<h1>My Recent Articles</h1>
 				</div>
 			</div>
-			<div class="row" id="article-wrapper">
-		        <div class="col-lg-4 col-md-6 article-item filter-app">
-		          	<a href="">
-		            	<img src="img/carousel.jpg" alt="">
-		            	<div class="details">
-		              		<h4>App 1</h4>
-		              		<span>Alored dono par</span>
-		            	</div>
-		          	</a>
+			<div class="row">
+		        <div class="col-md-4">
+		        	<div class="content-article">
+		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
+		        		<div class="caption-article">
+		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<hr>
+		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
+		        			<p><a href="#" class="btn btn-outline-danger btn-article">Read More</a></p>
+		        		</div>
+		        	</div>
+		        	
+		        </div>
+		        <div class="col-md-4 item">
+		        	<div class="content-article">
+		        		<div class="image-article" style="background-image:url('img/app1.jpg')"></div>
+		        		<div class="caption-article">
+		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<hr>
+		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
+		        			<p><a href="#" class="btn btn-outline-danger btn-article">Read More</a></p>
+		        		</div>
+		        	</div>
+		        </div>
+				<div class="col-md-4 item">
+		        	<div class="content-article">
+		        		<div class="image-article" style="background-image:url('img/header.jpg')"></div>
+		        		<div class="caption-article">
+		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<hr>
+		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
+		        			<p><a href="#" class="btn btn-outline-danger btn-article">Read More</a></p>
+		        		</div>
+		        	</div>
 		        </div>
 			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-3 mx-auto" align="center">
+					<button class="btn btn-block btn-outline-danger">See More</button>
+				</div>
+			</div>
+
 		</div>
 		
 	</section>
