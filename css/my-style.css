@@ -504,4 +504,36 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-color: #e74c3c;
 }
 
+.cover-page-article {
+	width: 100%;
+	height: 190px;
+	background: url('../img/invite.jpg');
+	background-position: center;
+	margin-top:60px;
+	text-align: center;
+	
+}
 
+.cover-page-article .title-page {
+	background-color: white;
+	width: auto;
+	margin-top: 65px;
+}
+
+.content-article .caption-article .text-desc {
+	font-size: 13px;
+	margin-bottom: 12px;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 0;
+}
+
+
+.pagination-color {
+	color: red;
+}
+
+.pagination-color:hover {
+	color:white;
+	background-color: #E52544;
+}
