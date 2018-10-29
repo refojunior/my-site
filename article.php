@@ -15,6 +15,7 @@
 	  	
 	  	#mainNav .navbar-nav > li > a:hover {
 	    	color: #e74c3c;
+
 	  	}
 	</style>
 	
@@ -38,7 +39,7 @@
 					<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
 		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
@@ -50,7 +51,7 @@
 					<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/header.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
 		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
@@ -62,7 +63,7 @@
 					<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
 		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
@@ -74,7 +75,7 @@
 					<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
 		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
@@ -86,7 +87,7 @@
 					<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
 		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
@@ -98,7 +99,7 @@
 					<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2><b>Judul Artikel Judul Artikel Judul Artikel</b></h2>
+		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
 		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick </p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
