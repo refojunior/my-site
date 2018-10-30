@@ -1,3 +1,14 @@
+//hidden element when size small
+var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var rightMenu = document.getElementById("right-menu");
+var col = document.getElementById("col-width");
+if(width <= 992) {
+  rightMenu.style.display = "none";
+  col.classList.remove("col-md-8");
+  col.classList.add("col-md-12");
+}
+
+
 //fade in scroll
 $(document).ready(function() {
     

@@ -220,21 +220,41 @@ header.masthead .device-container .screen img {
 	.thumbs-content {
 		width: 100%;
 		height: auto;
-		margin:0;
-		padding: 0;
+		
 	}
 
 	.thumbs-title {
 		margin:0;
 		padding: 0;
-		font-size: 18px;
-
+		font-size: 15px;
+		padding-bottom: 3px;
 	}
 
-	 .text-desc {
-		font-size: 13px;
+	.thumbs-link {
+		color:#222;
+	}
+
+	.thumbs-link:hover {
+		text-decoration: none;
+		color: #e74c3c;
+	}
+
+	.text-desc {
+		font-size: 11px;
 		margin:0;
 		padding: 0;
+		background-color: #F1423B;
+		color:white;
+		border-radius: 6px;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+	a .text-desc:hover {
+		
+		background-color: #222;
+		text-decoration: none;
+		color:white;
 	}
 
 	.thumbs-hr {
@@ -245,6 +265,28 @@ header.masthead .device-container .screen img {
 		margin-bottom: 8px;
 	}
 
+	.right-menu {
+		background-color: white;
+		margin:0;
+		padding: 0;
+		padding-top:10px;
+		width: 100%;
+	}
+
+	.right-menu ul li a{
+		color: #F1423B;
+		font-size:15px;
+	}
+	.right-menu ul li a:hover{
+		color: #222;
+		text-decoration: none;
+	}
+
+}
+
+.content-article .caption-article .link-article-mobile {
+	padding-left:10px;
+	padding-right: 10px;
 }
 
 .my-logo {
@@ -259,7 +301,6 @@ header.masthead .device-container .screen img {
 
 #service {
    background-color: #f2f2f2;
- 
 }
 
 
@@ -412,6 +453,16 @@ header.masthead .device-container .screen img {
   margin-right: 10px;
 }
 
+.content-article .caption-article a{
+	color:#222;
+}
+
+.content-article .caption-article a:hover {
+	text-decoration: none;
+	color:#E52544;
+
+}
+
 .content-article .caption-article hr {
   margin:0;
   padding-bottom: 6px;
@@ -424,7 +475,7 @@ header.masthead .device-container .screen img {
   
 }
 
-.content-article .caption-article .text-desc {
+.content-article .caption-article .text-ket{
 	font-size: 13px;
 	margin-bottom: 12px;
 	margin-left: 15px;
@@ -587,4 +638,41 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .body-read-article {
 	padding-top: 100px;
+}
+
+.bottom-list {
+    position: relative;
+    float: left;
+    width:  100%;
+    height: 120px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.bottom-caption {
+	background-color: white;
+	margin-bottom: 20px;
+	padding-left:8px;
+	padding-right:8px;
+}
+
+.bottom-category {
+	font-size: 11px;
+	margin:0;
+	padding: 0;
+	background-color: #F1423B;
+	color:white;
+	padding-right: 2px;
+}
+
+.bottom-title a{
+	color:#222;
+	font-size: 18px;
+}
+
+.bottom-title a:hover {
+	text-decoration: none;
+	color:#F1423B;
 }

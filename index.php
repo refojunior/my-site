@@ -195,24 +195,23 @@
 		        	<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
-		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
+		        			<h2><a href="" class="link-article">Judul Artikel Judul Artikel Judul Artikel</a></h2>
+		        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-		        			<p><a href="#" class="btn btn-outline-danger btn-article">Read More</a></p>
+		        			<br>
 		        		</div>
 		        	</div>
-		        	
 		        </div>
 		        <div class="col-md-4 item">
 		        	<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/app1.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
-		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
+		        			<h2><a href="" class="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
+		        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-		        			<p><a href="#" class="btn btn-outline-danger btn-article">Read More</a></p>
+		        			<br>
 		        		</div>
 		        	</div>
 		        </div>
@@ -220,11 +219,11 @@
 		        	<div class="content-article">
 		        		<div class="image-article" style="background-image:url('img/header.jpg')"></div>
 		        		<div class="caption-article">
-		        			<h2>Judul Artikel Judul Artikel Judul Artikel</h2>
-		        			<p class="text-muted text-desc">Published : 29-10-2018 | Categories : Tips & Trick</p>
+		        			<h2><a href="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
+		        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
 		        			<hr>
 		        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-		        			<p><a href="#" class="btn btn-outline-danger btn-article">Read More</a></p>
+		        			<br>
 		        		</div>
 		        	</div>
 		        </div>
