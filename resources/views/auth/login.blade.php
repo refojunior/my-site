@@ -6,7 +6,7 @@ Login
 
 @section('login')
 
-<body class="login-body">
+<div class="login-body">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5">
@@ -76,7 +76,7 @@ Login
           
         </div>
     </div> 
-
+</div>
     
 
 @endsection
