@@ -80,3 +80,13 @@ Login
     
 
 @endsection
+
+@push('scripts')
+
+<script>
+    var style = document.getElementById('styles');
+    var res = styles.href.replace('bootstrap', 'bootstrap1');
+    style.href = res;
+</script>
+
+@endpush
