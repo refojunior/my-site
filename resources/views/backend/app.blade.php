@@ -18,6 +18,8 @@
 
     <!-- FONT AWESOME v5 & Fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
     
     <!-- my custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/my-style.css')}}">
@@ -47,8 +49,9 @@
                 <br><br>
                 @yield('content')
             </div>
-            <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+
+            @include('backend.footer')
+            
         </div>
     </div>
 

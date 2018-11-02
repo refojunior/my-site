@@ -2,7 +2,7 @@
     <div class="navbar-header">
         <div class="top-left-part">
             <!-- Logo -->
-            <a class="logo" href="index.html">
+            <a class="logo" href="{{ route('dashboard') }}">
                 <img src="{{ asset('img/logo-admin.jpg') }}" width="230px" alt="home" class="light-logo" /> 
             </a>
         </div>

@@ -12,6 +12,7 @@ class DashboardController extends Controller
     }
 
     public function index(){
-    	return view('backend.dashboard.index');
+    	$data['menu'] = 1;
+    	return view('backend.dashboard.index', $data);
     }
 }

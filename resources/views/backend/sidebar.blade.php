@@ -5,13 +5,13 @@
         </div>
         <ul class="nav" id="side-menu">
             <li style="padding: 70px 0 0;">
-                <a href="index.html" class="waves-effect"><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp; Dashboard</a>
+                <a href="dashboard" class="waves-effect {{ $menu == 1 ? 'active' : '' }} "><i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp; Dashboard</a>
             </li>
             <li>
-                <a href="profile.html" class="waves-effect"><i class="fa fa-list " aria-hidden="true"></i> &nbsp; Category</a>
+                <a href="{{ route('category.index') }}" class="waves-effect {{ $menu == 2 ? 'active' : '' }}"><i class="fa fa-list " aria-hidden="true"></i> &nbsp; Category</a>
             </li>
             <li>
-                <a href="profile.html" class="waves-effect"><i class="fa fa-book" aria-hidden="true"></i>  &nbsp; Article</a>
+                <a href="profile.html" class="waves-effect {{ $menu == 3 ? 'active' : '' }}"><i class="fa fa-book" aria-hidden="true"></i>  &nbsp; Article</a>
             </li>
         </ul>
     </div>
