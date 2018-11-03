@@ -1,4 +1,5 @@
 <style>
+/* STYLING TOAST NYA */
 #toast-container > div{
     position: relative;
     pointer-events: auto;

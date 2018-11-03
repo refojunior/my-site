@@ -30,8 +30,21 @@ Category
                         <td>{{ $no++ }}</td>
                         <td>{{ $row['name'] }}</td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-cog"></i></a>
+                            <!-- form (for delete) -->
+                            <form action="{{ route('category.destroy', ['id' => $row->id] ) }}" id="delete-category" method="post">
+                                <!-- EDIT BUTTON -->
+                                <a href="{{ route('category.edit', ['id' => $row['id']]) }}" class="btn btn-sm btn-warning"><i class="fa fa-cog"></i></a>
+                                <!-- DELET BUTTON -->
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin Delet Data?')">
+                                    <i class="fa fa-trash"></i> 
+                                </button>
+                                @csrf 
+                                @method('DELETE')
+                            </form>
+                            <!-- END FORM -->
                         </td>
+                        
+                       
                     </tr>
                 @endforeach
                 </tbody>
@@ -42,6 +55,8 @@ Category
         </div>
     </div>
 </div>
+
+
 
 @endsection
 

@@ -51,17 +51,7 @@ class CategoryController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
+ 
     /**
      * Show the form for editing the specified resource.
      *
@@ -70,7 +60,14 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['category'] = Category::find($id);
+        $data['menu'] = 2;
+        if($data['category']){
+            return view('backend.category.edit', $data);
+        } else {
+            notifMsg('danger', 'Data Category Not Found!');
+            return redirect()->route('category.index');
+        }
     }
 
     /**
@@ -80,9 +77,16 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreCategory $request, $id)
     {
-        //
+        $update = Category::find($id)->update($request->toArray());
+        if($update) {
+            notifMsg('success', 'Updating Data Category Success!');
+            return redirect()->route('category.index');
+        } else {
+            notifMsg('danger', 'Delete Failed!');
+            return redirect()->route('category.index');
+        }
     }
 
     /**
@@ -93,6 +97,14 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Category::destroy($id);
+        
+        if($delete) {
+            notifMsg('warning', 'Delete Success!');
+            return redirect()->route('category.index');
+        } else {
+            notifMsg('danger', 'Delete Failed!');
+            return redirect()->route('category.index');
+        }
     }
 }

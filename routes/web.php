@@ -24,7 +24,4 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::resource('category', 'CategoryController');
 
-Route::get('flash-json', function(){
-    return view('backend.flash_message');
-})->name('flash-json');
 
