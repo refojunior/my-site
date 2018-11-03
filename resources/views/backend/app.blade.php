@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/my-style.css')}}">
 
     <!-- TOAST -->
-    <link rel="stylesheet" href="{{ asset('css/jquery.toast.css') }}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body class="fix-header" style="height: auto">
     <!-- ============================================================== -->
@@ -48,11 +48,11 @@
        
          <div id="page-wrapper">
             <div class="container-fluid">
+               
                 <br><br>
                 @yield('content')
             </div>
 
-            @include('backend.footer')
             
         </div>
     </div>
@@ -69,10 +69,11 @@
     <!-- Menu Plugin JavaScript -->
     <script src="{{ asset('js/sidebar-nav.min.js')}}"></script>
     <script src="{{ asset('js/jquery.slimscroll.js')}}"></script>
-    <script src="{{ asset('assets/jquery/jquery.toast.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('js/custom.min.js')}}"></script>
     
+    @include('backend.flash_message')
 
     @stack('scripts')
     

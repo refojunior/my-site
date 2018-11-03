@@ -45,8 +45,8 @@ class CategoryController extends Controller
             $input = $request->toArray();
             $input['name'] = ucfirst($input['name']);
             Category::create($input);
-            $request->session()->flash('success', 'Success Add Category');
-            $request->session()->flash('flashs', 'Checking');
+            notifMsg('success', 'Success Add Category');
+            
             return redirect()->route('category.index');
         }
     }
