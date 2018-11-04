@@ -11,7 +11,7 @@
                 <a href="{{ route('category.index') }}" class="waves-effect {{ $menu == 2 ? 'active' : '' }}"><i class="fa fa-list " aria-hidden="true"></i> &nbsp; Category</a>
             </li>
             <li>
-                <a href="profile.html" class="waves-effect {{ $menu == 3 ? 'active' : '' }}"><i class="fa fa-book" aria-hidden="true"></i>  &nbsp; Article</a>
+                <a href="{{ route('article.index') }}" class="waves-effect {{ $menu == 3 ? 'active' : '' }}"><i class="fa fa-book" aria-hidden="true"></i>  &nbsp; Article</a>
             </li>
         </ul>
     </div>

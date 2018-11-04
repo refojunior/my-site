@@ -25,6 +25,9 @@
 
     <!-- TOAST -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <!-- TAGS DRAG DROP PLUGINS -->
+    <link rel="stylesheet" href="{{ asset('assets/selectize.css') }}">
 </head>
 <body class="fix-header" style="height: auto">
     <!-- ============================================================== -->
@@ -79,13 +82,15 @@
 
     <!-- Bootstrap core JavaScript -->
     <!-- jQuery -->
-     <script src="{{ asset('assets/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('assets/bootstraap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- Menu Plugin JavaScript -->
     <script src="{{ asset('js/sidebar-nav.min.js')}}"></script>
     <script src="{{ asset('js/jquery.slimscroll.js')}}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('js/custom.min.js')}}"></script>
     

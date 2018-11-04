@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::resource('category', 'CategoryController');
+Route::resource('backend/category', 'CategoryController');
 
+Route::resource('backend/article', 'ArticleController')->middleware('auth');
 
