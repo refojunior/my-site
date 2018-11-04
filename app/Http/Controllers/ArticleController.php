@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreArticle;
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 
 class ArticleController extends Controller
 {
@@ -27,6 +29,7 @@ class ArticleController extends Controller
     public function create()
     {
         $data['menu'] = 3;
+        $data['categories'] = Category::all();
         return view('backend.article.create', $data);
     }
 
@@ -36,9 +39,10 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreArticle $request)
     {
-        //
+        $validate = $request->validated();
+        dd($request->toArray());
     }
 
     /**
