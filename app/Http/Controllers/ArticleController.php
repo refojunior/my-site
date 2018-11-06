@@ -18,7 +18,7 @@ class ArticleController extends Controller
     public function index()
     {
         $data['menu'] = 3;
-        $data['article'] = Article::all();
+        $data['articles'] = Article::all();
         return view('backend.article.index', $data);
     }
 
@@ -43,20 +43,33 @@ class ArticleController extends Controller
     public function store(StoreArticle $request)
     {
         $validate = $request->validated();
-
         if($validate){
-            //uplaod cover
+            //upload cover
             $cover = $request->file('cover')->store('cover');
             $fileName = explode('/', $cover);
-            Article::create(inputArticle($request, $fileName[1]));
+            //insert table article
+            $LastestId = Article::create(inputArticle($request, $fileName[1]))->id;
+            //try resize
             try {
                 resize($fileName[1]);
             } catch (Exception $e) {
                 dd($e->getMessage());
             }
 
-            
+            //insert category
+            for($i = 0; $i < count($request->tags); $i++){
+               Tag::create([
+                    'category_id' => $request->tags[$i],
+                    'article_id' => $LastestId
+                ]);
+            }
 
+            notifMsg('success', 'Add Article Successfully');
+            return redirect()->route('article.index');
+
+        } else {
+            notifMsg('danger', 'Add Article Failed!');
+            return redirect()->route('article.index');
         }
         
         

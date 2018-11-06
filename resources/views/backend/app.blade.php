@@ -23,6 +23,8 @@
     <!-- my custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/my-style.css')}}">
 
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+
     <!-- TOAST -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 

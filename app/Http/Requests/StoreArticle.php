@@ -28,7 +28,7 @@ class StoreArticle extends FormRequest
             'date' => 'required|date_format:"Y-m-d"',
             'content' => 'required',
             'keywords' => 'required',
-            'cover' => 'required|max:2000|mimes:jpg,png,jpeg|mimetypes:image/*'
+            'cover' => 'required|max:2000|mimes:jpg,png,jpeg|mimetypes:image/*',
         ];
     }
 }

@@ -22,12 +22,13 @@ function inputArticle($request, $fileName){
 //resize image upload cover
 function resize($image){
     $img = Image::make('storage/cover/'.$image);
-    $img->resize(450, null, function($constraint){
+    $img->resize(350, null, function($constraint){
         $constraint->aspectRatio();
     });
     $img->save('storage/cover/resize/'.$image);
     return $img;
 }
+
 
 
 ?>

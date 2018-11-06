@@ -687,3 +687,21 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
 }
+
+
+
+.adminh1 {
+    font-family: 'Crete Round', serif;
+  }
+
+  .adminh1:hover{
+    color:#E52444;
+  }
+  .tags {
+    background-color: #17A2B8;
+    padding:3px;
+    border-radius:5px;
+    font-size:12px;
+    color:white;
+    margin-right: 5px;
+  }
