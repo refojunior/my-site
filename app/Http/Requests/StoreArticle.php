@@ -24,7 +24,7 @@ class StoreArticle extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:articles|regex:/^[a-zA-Z]+$/u|max:30|',
+            'title' => 'required|unique:articles|max:30|',
             'date' => 'required|date_format:"Y-m-d"',
             'content' => 'required',
             'keywords' => 'required',

@@ -131,10 +131,10 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                Telp/SMS/WA
               </li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
+                : &nbsp; 089 709 763 22
               </li>
             </ul>
           </div>

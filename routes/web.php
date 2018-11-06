@@ -16,6 +16,15 @@ Route::get('/', function () {
 });
 
 
+Route::get('testing', function(){
+	$img = Image::make('img/carousel2.jpg')->resize(300, null, function ($constraint) {
+			    $constraint->aspectRatio();
+			});
+	$img->save('storage/cover/resize/carousel2.jpg', 60);
+
+	return $img->response('jpg');
+});
+
 //route for dashboard (admin)
 
 Auth::routes();

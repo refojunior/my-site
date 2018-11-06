@@ -6,6 +6,7 @@ use App\Http\Requests\StoreArticle;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
+use App\Tag;
 
 class ArticleController extends Controller
 {
@@ -42,7 +43,24 @@ class ArticleController extends Controller
     public function store(StoreArticle $request)
     {
         $validate = $request->validated();
-        dd($request->toArray());
+
+        if($validate){
+            //uplaod cover
+            $cover = $request->file('cover')->store('cover');
+            $fileName = explode('/', $cover);
+            Article::create(inputArticle($request, $fileName[1]));
+            try {
+                resize($fileName[1]);
+            } catch (Exception $e) {
+                dd($e->getMessage());
+            }
+
+            
+
+        }
+        
+        
+
     }
 
     /**

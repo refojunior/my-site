@@ -6,18 +6,21 @@ Add Article
 
 @section('content')
 
+<!-- <img src="{{ asset('storage/cover/LOjkZ43AOtFF7ajcYsYh3DS1lug5FBp5K0q5J1W9.jpeg') }}" alt="">
+ -->
 <div class="white-box">
 	<div class="row">
 		<div class="col-md-12">
 			<form action="{{ route('article.store') }}" method="post" enctype="multipart/form-data">
 				@csrf
+				<input type="hidden" name="date" value="{{ date('Y-m-d') }}">
 				<div class="form-group">
 					<label for="title">Title</label>
 					<input type="text" class="form-control" name="title" value="{{ old('title') }}">	
 				</div>
 				<div class="form-group">
 					<label for="tags">Tags</label>
-					<select class="form-control" id="tags" name="tags[]" multiple="multiple">
+					<select class="form-control" id="tags" name="tags[]" multiple="multiple" required>
 						@foreach($categories as $tags)
 						<option value="{{ $tags->id }}">{{ $tags->name }}</option>
 						@endforeach
@@ -29,7 +32,7 @@ Add Article
 				</div>
 				<div class="form-group">
 					<label for="content">Content</label>
-					<textarea name="content" class="form-control"></textarea>
+					<textarea name="content" class="form-control">{{ old('content') }}</textarea>
 				</div>
 				<div class="form-group">
 					<label for="cover">Cover</label>
