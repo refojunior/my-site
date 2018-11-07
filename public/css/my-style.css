@@ -692,10 +692,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .adminh1 {
     font-family: 'Crete Round', serif;
+    transition: 0.4s;
   }
 
   .adminh1:hover{
     color:#E52444;
+    transition: 0.4s;
   }
   .tags {
     background-color: #17A2B8;

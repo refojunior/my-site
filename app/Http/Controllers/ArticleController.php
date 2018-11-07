@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreArticle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Article;
 use App\Category;
 use App\Tag;
@@ -19,6 +20,8 @@ class ArticleController extends Controller
     {
         $data['menu'] = 3;
         $data['articles'] = Article::all();
+      
+        $data['tags'] = Tag::where('article_id');
         return view('backend.article.index', $data);
     }
 
@@ -71,8 +74,6 @@ class ArticleController extends Controller
             notifMsg('danger', 'Add Article Failed!');
             return redirect()->route('article.index');
         }
-        
-        
 
     }
 
@@ -95,7 +96,10 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['article'] = Article::find($id);
+        $data['menu'] = 3;
+        $data['categories'] = Category::all();
+        return view('backend.article.edit', $data);
     }
 
     /**
@@ -105,9 +109,25 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreArticle $request, $id)
     {
-        //
+        $validate = $request->validated();
+
+        if($request->cover != null){
+            $cover = $request->file('cover')->store('cover');
+            $fileName = explode('/', $cover);
+            //try resize
+            try {
+                resize($fileName[1]);
+            } catch (Exception $e) {
+                dd($e->getMessage());
+            }
+
+            Article::find($id)->update(updateArticleWithCover($request, $fileName[1]));
+        } else {
+            Article::find($id)->update($request->toArray());
+        }
+
     }
 
     /**

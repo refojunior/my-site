@@ -19,16 +19,19 @@ Data Articles
 			</div>
 			<div class="col-md-9">
 				<a href=""><h1 class="adminh1">{{ $data->title }}</h1></a>
-
-				<a href="#" class="tags">Programming</a><a href="#" class="tags">Javascript</a><a href="#" class="tags">Tips</a>
+				@foreach(searchSelectedTag($data->id) as $tags)
+					<a href="#" class="tags">{{ $tags->name }}</a>
+				@endforeach
 				<br><br>
-				<a href="" class="btn btn-sm btn-info"><i class="fa fa-eye"></i></a>
-				<a href="" class="btn btn-sm btn-warning"><i class="fa fa-cog"></i></a>
-				<a href="" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+				<a href="" class="btn btn-sm btn-info">View</a>
+				<a href="{{ route('article.edit', ['id' => $data->id ]) }}" class="btn btn-sm btn-warning">Edit</a>
+				<a href="" class="btn btn-sm btn-danger">Hapus</a>
 			</div>
 		</div>
 	</div>
 @endforeach
 
 @endsection
+
+
 
