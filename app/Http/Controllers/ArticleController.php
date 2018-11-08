@@ -20,7 +20,6 @@ class ArticleController extends Controller
     {
         $data['menu'] = 3;
         $data['articles'] = Article::paginate(8);
-        $data['tags'] = Tag::where('article_id');
         return view('backend.article.index', $data);
     }
 
@@ -71,15 +70,22 @@ class ArticleController extends Controller
 
     }
 
+    public function searching(Request $request){
+        $keywords = $request->title;
+        $data['search'] = Article::where('title', 'like', '%'.$keywords.'%')->paginate(8);
+        $data['menu'] = 3;
+        return view('backend.article.search', $data);
+    }
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+    
     }
 
     /**
@@ -140,6 +146,10 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Article::destroy($id);
+        notifMsg('warning', 'Delete Article Successfully');
+        return redirect()->route('article.index');
     }
+
+
 }

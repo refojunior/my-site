@@ -6,12 +6,8 @@ Data Articles
 
 @section('content')
 
-<div class="row">
-    <div class="col-md-12"><a href="{{ route('article.create') }}" class="btn btn-sm btn-primary">Add Articles</a></div>
-</div>
-<br>
 
-@foreach($articles as $data)
+@foreach($search as $data)
 	<div class="white-box">
 		<div class="row">
 			<div class="col-md-3">
@@ -37,7 +33,7 @@ Data Articles
 	</div>
 @endforeach
 
-{{ $articles->links() }}
+{{ $search->links() }}
 
 @endsection
 

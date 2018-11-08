@@ -9,8 +9,9 @@
         <!-- /Logo -->
         <ul class="nav navbar-top-links navbar-right pull-right">
             <li>
-                <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                    <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> 
+                <form id="search" action="{{ route('article.search') }}" class="app-search hidden-sm hidden-xs m-r-10" method="get">
+                  
+                    <input type="text" name="title" placeholder="Search Article..." class="form-control"> <a id="search-article"><i class="fa fa-search"></i></a> 
                 </form>
             </li>
             <li>
@@ -27,3 +28,11 @@
     </div>
    
 </nav>
+
+@push('scripts')
+<script>
+    document.getElementById("search-article").onclick = function() {
+        document.getElementById("search").submit();
+    }
+</script>
+@endpush

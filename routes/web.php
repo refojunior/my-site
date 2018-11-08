@@ -27,5 +27,8 @@ Route::resource('backend/category', 'CategoryController');
 
 Route::resource('backend/article', 'ArticleController')->middleware('auth');
 
+Route::get('backend/search', 'ArticleController@searching')->middleware('auth')->name('article.search');
+
 Route::get('tags/search/{id}', 'TagController@search')->middleware('auth')->name('tags.search');
+
 
