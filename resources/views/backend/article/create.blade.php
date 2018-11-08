@@ -36,7 +36,7 @@ Add Article
 				</div>
 				<div class="form-group">
 					<label for="cover">Cover</label>
-					<input type="file" class="form-control" name="cover" value="{{ old('cover') }}">
+					<input type="file" class="form-control" name="cover" value="{{ old('cover') }}" required>
 				</div>
 				<div class="form-group">
 					<button type="submit" class="btn btn-lg btn-success">Post</button>

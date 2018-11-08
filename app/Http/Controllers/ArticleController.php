@@ -19,8 +19,7 @@ class ArticleController extends Controller
     public function index()
     {
         $data['menu'] = 3;
-        $data['articles'] = Article::all();
-      
+        $data['articles'] = Article::paginate(8);
         $data['tags'] = Tag::where('article_id');
         return view('backend.article.index', $data);
     }
@@ -60,12 +59,7 @@ class ArticleController extends Controller
             }
 
             //insert category
-            for($i = 0; $i < count($request->tags); $i++){
-               Tag::create([
-                    'category_id' => $request->tags[$i],
-                    'article_id' => $LastestId
-                ]);
-            }
+            inputTags($request->tags, $LastestId);
 
             notifMsg('success', 'Add Article Successfully');
             return redirect()->route('article.index');
@@ -123,10 +117,18 @@ class ArticleController extends Controller
                 dd($e->getMessage());
             }
 
-            Article::find($id)->update(updateArticleWithCover($request, $fileName[1]));
+            Article::find($id)->update(inputArticle($request, $fileName[1]));
         } else {
             Article::find($id)->update($request->toArray());
         }
+
+        Tag::where('article_id', $id)->delete();
+
+        inputTags($request->tags, $id);
+
+        notifMsg('success', 'Update Article Successfully');
+        return redirect()->route('article.index');
+      
 
     }
 
