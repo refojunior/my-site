@@ -16,6 +16,7 @@ function inputArticle($request, $fileName){
 		'title' => $request->title,
         'date' => $request->date,
         'content' => $request->content,
+        'excerpt' => $request->excerpt,
         'keywords' => $request->keywords,
         'cover' => $fileName,
         'user_id' => Auth::user()->id

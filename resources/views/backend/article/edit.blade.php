@@ -30,8 +30,12 @@ Edit Article
 					<input type="text" class="form-control" name="keywords" value="{{ $article->keywords }}">
 				</div>
 				<div class="form-group">
+					<label for="keywords">Excerpt</label>
+					<textarea name="excerpt" class="form-control">{{ $article->excerpt }}</textarea>
+				</div>
+				<div class="form-group">
 					<label for="content">Content</label>
-					<textarea name="content" class="form-control">{{ $article->content }}</textarea>
+					<textarea name="content" class="form-control" id="content">{{ $article->content }}</textarea>
 				</div>
 				<div class="form-group">
 					<label for="cover">Cover</label>
@@ -55,7 +59,7 @@ Edit Article
 
   var editor_config = {
     path_absolute : "/",
-    selector: "textarea",
+    selector: "#content",
     plugins: [
       "advlist autolink lists link image charmap print preview hr anchor pagebreak",
       "searchreplace wordcount visualblocks visualchars code fullscreen",
@@ -83,7 +87,10 @@ Edit Article
         resizable : "yes",
         close_previous : "no"
       });
-    }
+    },
+    image_class_list: [
+        { title: "Responsive", value: "img-fluid img-content" }
+    ], 
   };
 
   tinymce.init(editor_config);

@@ -22,7 +22,10 @@ Data Articles
 				@foreach(searchSelectedTag($data->id) as $tags)
 					<a href="{{ route('tags.search', ['id' => $tags->category_id ]) }}" class="tags">{{ $tags->name }}</a>
 				@endforeach
-				<br><br>
+				<br><br> 
+				
+					<p> {{ substr($data->excerpt, 0, 160) }} [...] </p>
+	
 				<form action="{{ route('article.destroy', ['id' => $data->id ]) }}" method="post">
 					@csrf
 					@method("DELETE")

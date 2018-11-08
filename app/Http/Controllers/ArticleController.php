@@ -74,20 +74,15 @@ class ArticleController extends Controller
         $keywords = $request->title;
         $data['search'] = Article::where('title', 'like', '%'.$keywords.'%')->paginate(8);
         $data['menu'] = 3;
-        return view('backend.article.search', $data);
+        if(count($data['search']) == 0){
+            notifMsg('danger', 'Article Not Found!');
+            return redirect()->route('article.index');
+        } else {
+            return view('backend.article.search', $data);
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
     
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -125,6 +120,7 @@ class ArticleController extends Controller
 
             Article::find($id)->update(inputArticle($request, $fileName[1]));
         } else {
+            
             Article::find($id)->update($request->toArray());
         }
 

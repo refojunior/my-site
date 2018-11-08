@@ -31,8 +31,12 @@ Add Article
 					<input type="text" class="form-control" name="keywords" value="{{ old('keywords') }}">
 				</div>
 				<div class="form-group">
+					<label for="keywords">Excerpt</label>
+					<textarea name="excerpt" class="form-control">{{ old('excerpt') }}</textarea>
+				</div>
+				<div class="form-group">
 					<label for="content">Content</label>
-					<textarea name="content" class="form-control">{{ old('content') }}</textarea>
+					<textarea name="content" class="form-control" id="content">{{ old('content') }}</textarea>
 				</div>
 				<div class="form-group">
 					<label for="cover">Cover</label>
@@ -84,7 +88,7 @@ Add Article
 
   var editor_config = {
     path_absolute : "/",
-    selector: "textarea",
+    selector: "#content",
     plugins: [
       "advlist autolink lists link image charmap print preview hr anchor pagebreak",
       "searchreplace wordcount visualblocks visualchars code fullscreen",
@@ -112,7 +116,10 @@ Add Article
         resizable : "yes",
         close_previous : "no"
       });
-    }
+    },
+     image_class_list: [
+            { title: "Responsive", value: "img-fluid img-content" }
+        ], 
   };
 
   tinymce.init(editor_config);
