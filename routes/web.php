@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('frontend.home.index');
 });
 
+Route::get('/testing', function(){
+	$img = Image::make('img/invite.jpg');
+	$img->fit(350, 180, function ($constraint) {
+	    $constraint->upsize();
+	});
+	return $img->response('jpg');
+});
 
 
 //route for dashboard (admin)

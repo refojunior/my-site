@@ -18,7 +18,7 @@ Data Articles
 				<img src="{{ asset('storage/cover/resize/'. $data->cover) }}" alt="{{ $data->cover }}" class="img-responsive">
 			</div>
 			<div class="col-md-9">
-				<a href=""><h1 class="adminh1">{{ $data->title }}</h1></a>
+				<a href="{{ route('article.show', ['id' => $data->id ]) }}"><h1 class="adminh1">{{ $data->title }}</h1></a>
 				@foreach(searchSelectedTag($data->id) as $tags)
 					<a href="{{ route('tags.search', ['id' => $tags->category_id ]) }}" class="tags">{{ $tags->name }}</a>
 				@endforeach

@@ -35,6 +35,14 @@ class ArticleController extends Controller
         return view('backend.article.create', $data);
     }
 
+    public function show($id)
+    {
+        $data['read'] = Article::find($id);
+        $data['tags'] = Category::all();
+        $data['menu'] = 3;
+        return view('backend.article.read', $data);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

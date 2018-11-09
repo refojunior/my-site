@@ -35,8 +35,8 @@ function inputTags($arr, $article_id) {
 //resize image upload cover
 function resize($image){
     $img = Image::make('storage/cover/'.$image);
-    $img->resize(350, null, function($constraint){
-        $constraint->aspectRatio();
+    $img->fit(350, 180, function ($constraint) {
+        $constraint->upsize();
     });
     $img->save('storage/cover/resize/'.$image);
     return $img;

@@ -193,7 +193,7 @@
 		<div class="row">
 	        <div class="col-md-4">
 	        	<div class="content-article">
-	        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
+	        		<img src="img/testing.jpg" alt="" class="img-responsive my-thumbnail">
 	        		<div class="caption-article">
 	        			<h2><a href="" class="link-article">Judul Artikel Judul Artikel Judul Artikel</a></h2>
 	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
@@ -205,7 +205,7 @@
 	        </div>
 	        <div class="col-md-4 item">
 	        	<div class="content-article">
-	        		<div class="image-article" style="background-image:url('img/app1.jpg')"></div>
+	        		<img src="img/testing.jpg" alt="" class="img-responsive my-thumbnail">
 	        		<div class="caption-article">
 	        			<h2><a href="" class="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
 	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
@@ -217,7 +217,7 @@
 	        </div>
 			<div class="col-md-4 item">
 	        	<div class="content-article">
-	        		<div class="image-article" style="background-image:url('img/header.jpg')"></div>
+	        		<img src="img/testing.jpg" alt="" class="img-responsive my-thumbnail">
 	        		<div class="caption-article">
 	        			<h2><a href="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
 	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
