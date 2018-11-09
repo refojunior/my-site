@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('frontend.home.index');
+	$data['ini_meta'] = "TEST META";
+    return view('frontend.home.index', $data);
 });
 
 Route::get('/testing', function(){

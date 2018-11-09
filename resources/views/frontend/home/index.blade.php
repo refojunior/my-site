@@ -1,6 +1,13 @@
 @extends('frontend.app')
 
+@section('title')
+Welcome 
+@endsection
+
+@section('description')
+	
 @section('content')
+
 <header class="masthead" >
 	<div class="container h-100">
 		<div class="row h-100">
@@ -254,3 +261,10 @@
 <br>
 
 @endsection
+
+<!-- nampilin form contact -->
+@push('contact')
+
+@include('frontend.contact')
+
+@endpush
