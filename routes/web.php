@@ -11,18 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	$data['ini_meta'] = "TEST META";
-    return view('frontend.home.index', $data);
-});
-
-Route::get('/testing', function(){
-	$img = Image::make('img/invite.jpg');
-	$img->fit(350, 180, function ($constraint) {
-	    $constraint->upsize();
-	});
-	return $img->response('jpg');
-});
+Route::get('/', 'Frontend\HomeController@index');
 
 
 //route for dashboard (admin)

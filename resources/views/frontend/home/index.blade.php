@@ -198,42 +198,22 @@ Welcome
 			</div>
 		</div>
 		<div class="row">
+			@foreach($articles as $article)
 	        <div class="col-md-4">
 	        	<div class="content-article">
-	        		<img src="img/testing.jpg" alt="" class="img-responsive my-thumbnail">
+	        		<img src="{{ asset('storage/cover/resize/'.$article->cover) }}" alt="{{ $article->cover }}" class="img-fluid my-thumbnail">
 	        		<div class="caption-article">
-	        			<h2><a href="" class="link-article">Judul Artikel Judul Artikel Judul Artikel</a></h2>
-	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
+	        			<h2><a href="" class="link-article">{{ $article->title }}</a></h2>
+	        			<p class="text-muted text-ket">Published : {{ $article->date }} | Categories : <a href="">Tips & Trick</a></p>
 	        			<hr>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
+	        			<p>{{ substr($article->excerpt, 0, 160) }} <a href="#">[Read More]</a> </p>
 	        			<br>
 	        		</div>
 	        	</div>
 	        </div>
-	        <div class="col-md-4 item">
-	        	<div class="content-article">
-	        		<img src="img/testing.jpg" alt="" class="img-responsive my-thumbnail">
-	        		<div class="caption-article">
-	        			<h2><a href="" class="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
-	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
-	        			<hr>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-	        			<br>
-	        		</div>
-	        	</div>
-	        </div>
-			<div class="col-md-4 item">
-	        	<div class="content-article">
-	        		<img src="img/testing.jpg" alt="" class="img-responsive my-thumbnail">
-	        		<div class="caption-article">
-	        			<h2><a href="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
-	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
-	        			<hr>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-	        			<br>
-	        		</div>
-	        	</div>
-	        </div>
+	        @endforeach
+	        
+			
 		</div>
 		<br>
 		<div class="row">

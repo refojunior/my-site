@@ -454,7 +454,7 @@ header.masthead .device-container .screen img {
 }
 
 .content-article .caption-article a{
-	color:#222;
+	color:grey;
 }
 
 .content-article .caption-article a:hover {
@@ -481,6 +481,7 @@ header.masthead .device-container .screen img {
 	margin-left: 15px;
 	margin-right: 15px;
 	padding: 0;
+  color:grey;
 }
 
 .btn-article {
