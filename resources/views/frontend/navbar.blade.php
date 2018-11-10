@@ -30,3 +30,5 @@
             </div>
         </div>
     </nav>
+
+    @stack('style_navbar')

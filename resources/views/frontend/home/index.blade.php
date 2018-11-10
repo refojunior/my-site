@@ -1,6 +1,6 @@
 @extends('frontend.app')
 
-@section('title')
+@section('frontend-title')
 Welcome 
 @endsection
 
@@ -203,10 +203,18 @@ Welcome
 	        	<div class="content-article">
 	        		<img src="{{ asset('storage/cover/resize/'.$article->cover) }}" alt="{{ $article->cover }}" class="img-fluid my-thumbnail">
 	        		<div class="caption-article">
-	        			<h2><a href="" class="link-article">{{ $article->title }}</a></h2>
-	        			<p class="text-muted text-ket">Published : {{ $article->date }} | Categories : <a href="">Tips & Trick</a></p>
+	        			<h2>
+	        				<a href="{{ route('articles.read', ['title' => linkTitle($article->title) ]) }}" class="link-article">{{ $article->title }}
+	        				</a>
+	        			</h2>
+	        			<p class="text-muted text-ket">
+	        				<i class="fa fa-calendar-alt"></i> : {{ $article->created_at }} &nbsp; 
+	        				<i class="fa fa-user"></i> <a href="https://instagram.com/refo_junior" target="_blank"> @refo_junior </a>
+	        			</p>
 	        			<hr>
-	        			<p>{{ substr($article->excerpt, 0, 160) }} <a href="#">[Read More]</a> </p>
+	        			<p>{{ substr($article->excerpt, 0, 160) }} 
+	        				<a href="{{ route('articles.read', ['title' => linkTitle($article->title) ]) }}">[Read More]</a> 
+	        			</p>
 	        			<br>
 	        		</div>
 	        	</div>
@@ -218,7 +226,7 @@ Welcome
 		<br>
 		<div class="row">
 			<div class="col-md-3 mx-auto" align="center">
-				<button class="btn btn-block btn-outline-danger">See More</button>
+				<a class="btn btn-block btn-outline-danger" href="{{ route('articles') }}">See More</a>
 			</div>
 		</div>
 		<br><br>

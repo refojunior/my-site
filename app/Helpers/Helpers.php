@@ -64,6 +64,30 @@ function checkSelected($option, $id){
     return false;
 }
 
+function styleNavbar(){
+    return "
+    <style>
+        #mainNav {
+            background-color: white;
+        }
+        #mainNav .navbar-nav > li > a,
+        #mainNav .navbar-nav > li > a:focus {
+            color: black;
+        }
+
+        
+        #mainNav .navbar-nav > li > a:hover {
+            color: #e74c3c;
+
+        }
+    </style>";
+}
+
+function linkTitle($title){
+    $lower = strtolower($title);
+    $replace = str_replace(" ", "-", $lower);
+    return $replace;
+}
 
 
 ?>

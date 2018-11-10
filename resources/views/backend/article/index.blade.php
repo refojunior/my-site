@@ -24,7 +24,7 @@ Data Articles
 				@endforeach
 				<br><br> 
 				
-					<p> {{ substr($data->excerpt, 0, 160) }} [...] </p>
+				<p> {{ substr($data->excerpt, 0, 160) }} [...] </p>
 	
 				<form action="{{ route('article.destroy', ['id' => $data->id ]) }}" method="post">
 					@csrf

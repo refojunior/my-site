@@ -1,8 +1,8 @@
 <!-- Default meta tags -->
-	@if(isset($article->meta))
-	<meta name="description" content="{{ $article->meta }}"/>
-	<meta property="og:description" content="{{ $article->meta }}"/>
-	<meta name="twitter:description" content="{{ $article->meta }}"/>
+	@if(isset($article->excerpt))
+	<meta name="description" content="{{ substr($article->excerpt, 0, 250) }}"/>
+	<meta property="og:description" content="{{ substr($article->excerpt, 0, 250) }}"/>
+	<meta name="twitter:description" content="{{ substr($article->excerpt, 0, 250) }}"/>
 	@else
 	<meta name="description" content="Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion."/>
 	<meta property="og:description" content="Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion."/>

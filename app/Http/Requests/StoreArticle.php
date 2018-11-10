@@ -27,7 +27,7 @@ class StoreArticle extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:articles,title,'.$this->segment(3).'|max:50|',
+            'title' => 'required|unique:articles,title,'.$this->segment(3).'|max:80|',
             'date' => 'required|date_format:"Y-m-d"',
             'excerpt' => 'required',
             'content' => 'required',

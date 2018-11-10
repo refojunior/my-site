@@ -9,7 +9,7 @@ use App\Article;
 class HomeController extends Controller
 {
     public function index(){
-    	$data['articles'] = Article::all();
+    	$data['articles'] = Article::orderBy('date', 'desc')->paginate(3);
     	return view('frontend.home.index', $data);
     }
 }
