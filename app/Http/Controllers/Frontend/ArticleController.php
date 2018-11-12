@@ -35,4 +35,11 @@ class ArticleController extends Controller
         return view('frontend.article.search_tag', $data);
 
     }
+
+    public function searchArticle(Request $request){
+        $keywords = $request->search;
+        $data['keywords'] = $request->search;
+        $data['articles'] = Article::where('title', 'like', '%'.$keywords.'%')->paginate(8);
+        return view('frontend.article.search_article', $data);
+    }
 }

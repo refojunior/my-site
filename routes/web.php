@@ -38,3 +38,4 @@ Route::get('/{title}', 'Frontend\ArticleController@read')->name('articles.read')
 
 Route::get('articles/tags/{id}', 'Frontend\ArticleController@searchTags')->name('articles.tag');
 
+Route::get('articles/search', 'Frontend\ArticleController@searchArticle')->name('articles.search');
