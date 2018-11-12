@@ -115,6 +115,9 @@ p {
   #mainNav.navbar-shrink {
     border-color: rgba(34, 34, 34, 0.1);
     background-color: white;
+    -webkit-box-shadow: -5px 4px 33px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 4px 33px -10px rgba(0,0,0,0.75);
+    box-shadow: -5px 4px 33px -10px rgba(0,0,0,0.75);
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #222222;
@@ -216,6 +219,7 @@ header.masthead .device-container .screen img {
   }
   
   .thumbs-date {
+    margin-top:9px;
     font-size: 11px;
   }
 
@@ -228,7 +232,7 @@ header.masthead .device-container .screen img {
 	.thumbs-title {
 		margin:0;
 		padding: 0;
-		
+		font-size:15px;
 	}
 
 	.thumbs-link {
@@ -268,9 +272,17 @@ header.masthead .device-container .screen img {
 
 	.right-menu {
     background-color: white;
-    margin-bottom:10px;
-
+    margin-bottom:20px;
+    transition: all ease 0.5s
 	}
+
+  .right-menu:hover {
+    margin-left:0px;
+  }
+
+  .right-menu:hover p {
+    color:#e74c3c;
+  }
 /*
 	.right-menu ul li a{
 		color: #F1423B;

@@ -44,7 +44,7 @@
 					</div>
 					<br>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4" id="right-menu">
 					<div class="row">
 						<div class="col-md-12">
 							<h2>Artikel Terbaru : </h2>
@@ -54,11 +54,13 @@
 					@foreach($articles as $row)
 					<div class="row right-menu">
 						<div class="col-md-5">
-							<img src="{{ asset('storage/cover/resize/'.$row->cover) }}" alt="Covers" class="img-fluid thumbs-image">
+							<a href="{{ route('articles.read', ['title' => linkTitle($row->title) ]) }}" class="thumbs-link">
+								<img src="{{ asset('storage/cover/thumbnail/'.$row->cover) }}" alt="Covers" class="img-fluid thumbs-image">
+							</a>
 						</div>
 						<div class="col-md-7">
 							<div class="text-muted thumbs-date">{{ $row->created_at }} </div>
-							<a href="{{ route('articles.read', ['title' => linkTitle($row->title) ]) }}" class="thumbs-link"><p class="thumbs-title">{{ substr($row->title, 0, 45) }} ...</p></a>
+							<a href="{{ route('articles.read', ['title' => linkTitle($row->title) ]) }}" class="thumbs-link"><p class="thumbs-title" style="font-size:15px">{{ substr($row->title, 0, 50) }} ...</p></a>
 						</div>
 					</div>
 					@endforeach
@@ -69,3 +71,20 @@
 </section>
 
 @endsection
+
+
+@push('scripts')
+<script>
+//hidden element when size small
+var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var rightMenu = document.getElementById("right-menu");
+var col = document.getElementById("col-width");
+if(width < 992) {
+  rightMenu.style.display = "none";
+  col.classList.remove("col-md-8");
+  col.classList.add("col-md-12");
+}
+
+</script>
+
+@endpush

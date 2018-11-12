@@ -61,6 +61,7 @@ class ArticleController extends Controller
             //try resize
             try {
                 resize($fileName[1]);
+                thumbnails($fileName[1]);
             } catch (Exception $e) {
                 dd($e->getMessage());
             }
@@ -122,6 +123,7 @@ class ArticleController extends Controller
             //try resize
             try {
                 resize($fileName[1]);
+                thumbnails($fileName[1]);
             } catch (Exception $e) {
                 dd($e->getMessage());
             }

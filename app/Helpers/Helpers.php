@@ -42,6 +42,16 @@ function resize($image){
     return $img;
 }
 
+function thumbnails($image){
+    $img = Image::make('storage/cover/'.$image);
+    $img->fit(128, 103, function($constraint) {
+        $constraint->upsize();
+    });
+
+    $img->save('storage/cover/thumbnail/'.$image);
+    return $img;
+}
+
 //search selected tags
 function searchSelectedTag($article_id){
     $src = DB::table('tags')
