@@ -38,7 +38,7 @@
 							<?= $article->content ?>
 							<strong>Tags :</strong>
 							@foreach(searchSelectedTag($article->id) as $tags)
-								<a href="{{ route('tags.search', ['id' => $tags->category_id ]) }}" class="tags">{{ $tags->name }}</a>
+								<a href="{{ route('articles.tag', ['id' => $tags->category_id ]) }}" class="tags">{{ $tags->name }}</a>
 							@endforeach
 						</div>
 					</div>
@@ -66,9 +66,32 @@
 					@endforeach
 				</div>
 			</div>
+
+
 		</div>
 	</div>
 </section>
+
+<!-- COMMENT -->
+<section>
+	<div class="container">
+		<div class="row">
+		<div class="col-md-8">
+				<div id="disqus_thread"></div>
+					<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+					var d = document, s = d.createElement('script');
+					s.src = 'https://refojunior.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 @endsection
 

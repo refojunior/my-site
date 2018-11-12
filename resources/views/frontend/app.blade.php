@@ -17,6 +17,7 @@
     @include('frontend.meta')
 </head>
 
+
 @include('frontend.navbar')
 
 <!-- Contentnya -->
@@ -24,7 +25,6 @@
 
 <!-- Contact form -->
 @stack('contact')
-
 
 @include('frontend.footer')
 

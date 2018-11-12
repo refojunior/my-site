@@ -36,3 +36,5 @@ Route::get('articles', 'Frontend\ArticleController@index')->name('articles');
 
 Route::get('/{title}', 'Frontend\ArticleController@read')->name('articles.read');
 
+Route::get('articles/tags/{id}', 'Frontend\ArticleController@searchTags')->name('articles.tag');
+
