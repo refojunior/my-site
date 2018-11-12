@@ -1,6 +1,13 @@
 @extends('frontend.app')
 
+@section('frontend-title')
+Welcome 
+@endsection
+
+@section('description')
+	
 @section('content')
+
 <header class="masthead" >
 	<div class="container h-100">
 		<div class="row h-100">
@@ -191,47 +198,35 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach($articles as $article)
 	        <div class="col-md-4">
 	        	<div class="content-article">
-	        		<div class="image-article" style="background-image:url('img/carousel.jpg')"></div>
+	        		<img src="{{ asset('storage/cover/resize/'.$article->cover) }}" alt="{{ $article->cover }}" class="img-fluid my-thumbnail">
 	        		<div class="caption-article">
-	        			<h2><a href="" class="link-article">Judul Artikel Judul Artikel Judul Artikel</a></h2>
-	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
+	        			<h2>
+	        				<a href="{{ route('articles.read', ['title' => linkTitle($article->title) ]) }}" class="link-article">{{ $article->title }}
+	        				</a>
+	        			</h2>
+	        			<p class="text-muted text-ket">
+	        				<i class="fa fa-calendar-alt"></i> : {{ $article->created_at }} &nbsp; 
+	        				<i class="fa fa-user"></i> <a href="https://instagram.com/refo_junior" target="_blank"> @refo_junior </a>
+	        			</p>
 	        			<hr>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
+	        			<p>{{ substr($article->excerpt, 0, 160) }} 
+	        				<a href="{{ route('articles.read', ['title' => linkTitle($article->title) ]) }}">[Read More]</a> 
+	        			</p>
 	        			<br>
 	        		</div>
 	        	</div>
 	        </div>
-	        <div class="col-md-4 item">
-	        	<div class="content-article">
-	        		<div class="image-article" style="background-image:url('img/app1.jpg')"></div>
-	        		<div class="caption-article">
-	        			<h2><a href="" class="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
-	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
-	        			<hr>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-	        			<br>
-	        		</div>
-	        	</div>
-	        </div>
-			<div class="col-md-4 item">
-	        	<div class="content-article">
-	        		<div class="image-article" style="background-image:url('img/header.jpg')"></div>
-	        		<div class="caption-article">
-	        			<h2><a href="">Judul Artikel Judul Artikel Judul Artikel</a></h2>
-	        			<p class="text-muted text-ket">Published : 29-10-2018 | Categories : <a href="">Tips & Trick</a></p>
-	        			<hr>
-	        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quis, vel. Quo incidunt enim a officiis vel, voluptate ea laudantium, voluptates veniam facere ipsa, assumenda temporibus, illo ducimus cum aspernatur! </p>
-	        			<br>
-	        		</div>
-	        	</div>
-	        </div>
+	        @endforeach
+	        
+			
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-3 mx-auto" align="center">
-				<button class="btn btn-block btn-outline-danger">See More</button>
+				<a class="btn btn-block btn-outline-danger" href="{{ route('articles') }}">See More</a>
 			</div>
 		</div>
 		<br><br>
@@ -254,3 +249,10 @@
 <br>
 
 @endsection
+
+<!-- nampilin form contact -->
+@push('contact')
+
+@include('frontend.contact')
+
+@endpush

@@ -12,7 +12,7 @@
     <link href="{{ asset('assets/bootstraap/css/bootstrap.min.css') }}" rel="stylesheet" id="styles">
 
     <link href="{{ asset('css/sidebar-nav.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/animate.css')}}" rel="stylesheet">
+   
     <link href="{{ asset('css/style.css')}}" rel="stylesheet">
     <link href="{{ asset('css/colors/default.css')}}" id="theme" rel="stylesheet">
 
@@ -23,11 +23,13 @@
     <!-- my custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/my-style.css')}}">
 
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+
     <!-- TOAST -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <!-- TAGS  -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 <body class="fix-header" style="height: auto">
     <!-- ============================================================== -->
@@ -85,12 +87,12 @@
     <script src="{{ asset('assets/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('assets/bootstraap/js/bootstrap.bundle.min.js')}}"></script>
-    <!-- Menu Plugin JavaScript -->
+    <!--  Menu Plugin JavaScript -->
     <script src="{{ asset('js/sidebar-nav.min.js')}}"></script>
-    <script src="{{ asset('js/jquery.slimscroll.js')}}"></script>
+    <script src="{{ asset('js/jquery.slimscroll.js')}}"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="{{ asset('js/select2.min.js') }}"></script>
+    <script src="{{ asset('assets/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('js/custom.min.js')}}"></script>

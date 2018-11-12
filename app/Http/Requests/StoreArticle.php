@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class StoreArticle extends FormRequest
 {
     /**
@@ -21,14 +22,17 @@ class StoreArticle extends FormRequest
      *
      * @return array
      */
+
+
     public function rules()
     {
         return [
-            'title' => 'required|unique:articles|regex:/^[a-zA-Z]+$/u|max:30|',
+            'title' => 'required|unique:articles,title,'.$this->segment(3).'|max:80|',
             'date' => 'required|date_format:"Y-m-d"',
+            'excerpt' => 'required',
             'content' => 'required',
             'keywords' => 'required',
-            'cover' => 'required|max:2000|mimes:jpg,png,jpeg|mimetypes:image/*'
+            'cover' => 'max:2000|mimes:jpg,png,jpeg|mimetypes:image/*',
         ];
     }
 }

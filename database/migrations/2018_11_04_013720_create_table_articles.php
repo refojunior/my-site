@@ -20,7 +20,7 @@ class CreateTableArticles extends Migration
             $table->text('content');
             $table->string('keywords');
             $table->string('cover');
-            $table->integer('clicks');
+            $table->integer('clicks')->nullable();
             $table->integer('user_id');
             $table->timestamps();
             $table->softDeletes();

@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home.index');
-});
+Route::get('/', 'Frontend\HomeController@index');
 
 
-//route for dashboard (admin)
+//ADMIN ROUTES
 
 Auth::routes();
 
@@ -25,4 +23,18 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('backend/category', 'CategoryController');
 
 Route::resource('backend/article', 'ArticleController')->middleware('auth');
+
+Route::get('backend/search', 'ArticleController@searching')->middleware('auth')->name('article.search');
+
+Route::get('backend/tags/search/{id}', 'TagController@search')->middleware('auth')->name('tags.search');
+
+
+
+//HOME PAGE ROUTES
+
+Route::get('articles', 'Frontend\ArticleController@index')->name('articles');
+
+Route::get('/{title}', 'Frontend\ArticleController@read')->name('articles.read');
+
+Route::get('articles/tags/{id}', 'Frontend\ArticleController@searchTags')->name('articles.tag');
 
