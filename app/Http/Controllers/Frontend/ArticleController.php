@@ -21,6 +21,7 @@ class ArticleController extends Controller
     	$data['tags'] = Category::all();
     	$data['article'] = Article::where('title', $title)->first();
     	$data['articles'] = Article::orderBy('date', 'desc')->paginate(3);
+        $data['random'] = Article::inRandomOrder()->get();
         $data['menu'] = 3;
     	return view('frontend.article.read', $data);
     }

@@ -46,6 +46,7 @@
 					</div>
 					<br>
 				</div>
+				<!-- ARTIKEL MENU KANAN -->
 				<div class="col-md-4" id="right-menu">
 					<div class="row">
 						<div class="col-md-12">
@@ -94,9 +95,34 @@
 	</div>
 </section>
 
-<div style="background-color: #f2f2f2; padding:20px; ">
+<section id="article">
+	<div class="container" >
+		<br><br>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Baca Juga</h2>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			@foreach($random as $randArticle)
+			<div class="col-md-4">
+	        	<a href="{{ route('articles.read', ['title' => linkTitle($randArticle->title) ]) }}" class="thumbs-link">
+					<img src="{{ asset('storage/cover/resize/'.$randArticle->cover) }}" alt="{{ $randArticle->cover }}" class="img-fluid my-thumbnail" style="margin-bottom: 0">
+				</a>
+	        	<div class="bottom-caption">
+	        		<span class="bottom-category">{{ $randArticle->created_at }}</span>
+	        		<div class="bottom-title">
+		        		<a href="{{ route('articles.read', ['title' => linkTitle($randArticle->title) ]) }}" class="thumbs-link"><p class="thumbs-title" style="font-size:15px">{{ $randArticle->title }}</p></a>
+		        	</div><br>
+	        	</div>
+        	</div>
+        	@endforeach
+		</div>
+	</div>
 	
-</div>
+</section>
+
 @endsection
 
 
