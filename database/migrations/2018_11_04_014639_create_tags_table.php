@@ -15,9 +15,11 @@ class CreateTagsTable extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id')->unsigned();
+            $table->integer('article_id')->unsigned();
+            $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->foreign('article_id')->references('id')->on('articles');
-            $table->timestamps();
         });
     }
 

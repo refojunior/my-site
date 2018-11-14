@@ -8,6 +8,7 @@
     <meta name="author" content="refojunior">
 
     <title>@yield('title') | Refo Junior</title>
+    <link rel="icon" href="{{ asset('img/my-icon.jpg') }}">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/bootstraap/css/bootstrap.min.css') }}" rel="stylesheet" id="styles">
 
