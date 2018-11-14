@@ -18,7 +18,7 @@
                         <a class="nav-link js-scroll-trigger {{($menu==3 ? 'active' : '')}} " href="{{ URL('/articles') }}">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="{{ URL('/contact') }}">Contact</a>
+                        <a class="nav-link js-scroll-trigger {{($menu==4 ? 'active' : '')}}" href="{{ URL('/contact') }}">Contact</a>
                     </li>
                     
                 </ul>

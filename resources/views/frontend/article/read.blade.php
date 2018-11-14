@@ -94,7 +94,9 @@
 	</div>
 </section>
 
-
+<div style="background-color: #f2f2f2; padding:20px; ">
+	
+</div>
 @endsection
 
 

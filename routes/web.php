@@ -32,8 +32,11 @@ Route::get('backend/tags/search/{id}', 'TagController@search')->middleware('auth
 
 //HOME PAGE ROUTES
 Route::get('/contact', function(){
-	return view('frontend.contact-form');
-});
+	$data['menu'] = 4;
+	return view('frontend.contact-form', $data);
+})->name('contact.form');
+
+Route::post('/contact', 'SendMailController@sendMail')->name('contact.send');
 
 Route::get('articles', 'Frontend\ArticleController@index')->name('articles');
 
