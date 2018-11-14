@@ -198,22 +198,22 @@ Welcome
 			</div>
 		</div>
 		<div class="row">
-			@foreach($articles as $article)
+			@foreach($articles as $row)
 	        <div class="col-md-4">
 	        	<div class="content-article">
-	        		<img src="{{ asset('storage/cover/resize/'.$article->cover) }}" alt="{{ $article->cover }}" class="img-fluid my-thumbnail">
+	        		<img src="{{ asset('storage/cover/resize/'.$row->cover) }}" alt="{{ $row->cover }}" class="img-fluid my-thumbnail">
 	        		<div class="caption-article">
 	        			<h2>
-	        				<a href="{{ route('articles.read', ['title' => linkTitle($article->title) ]) }}" class="link-article">{{ $article->title }}
+	        				<a href="{{ route('articles.read', ['title' => linkTitle($row->title) ]) }}" class="link-article">{{ $row->title }}
 	        				</a>
 	        			</h2>
 	        			<p class="text-muted text-ket">
-	        				<i class="fa fa-calendar-alt"></i> : {{ $article->created_at }} &nbsp; 
+	        				<i class="fa fa-calendar-alt"></i> : {{ $row->created_at }} &nbsp; 
 	        				<i class="fa fa-user"></i> <a href="https://instagram.com/refo_junior" target="_blank"> @refo_junior </a>
 	        			</p>
 	        			<hr>
-	        			<p>{{ substr($article->excerpt, 0, 160) }} 
-	        				<a href="{{ route('articles.read', ['title' => linkTitle($article->title) ]) }}">[Read More]</a> 
+	        			<p>{{ substr($row->excerpt, 0, 160) }} 
+	        				<a href="{{ route('articles.read', ['title' => linkTitle($row->title) ]) }}">[Read More]</a> 
 	        			</p>
 	        			<br>
 	        		</div>

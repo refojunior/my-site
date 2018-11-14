@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
     public function index(){
     	$data['articles'] = Article::orderBy('date', 'desc')->paginate(3);
+    	$data['menu'] = 1;
     	return view('frontend.home.index', $data);
     }
 }

@@ -1,3 +1,5 @@
+@if(isset($article->title))
+
 @extends('frontend.app')
 
 @section('frontend-title')
@@ -111,3 +113,6 @@ if(width < 992) {
 </script>
 
 @endpush
+
+@endif
+

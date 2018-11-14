@@ -16,6 +16,7 @@
 	<meta property="og:image" content="{{asset('storage/cover/'. $article->cover)}}">
 	@else
 	<meta property="image" content="img/welcome.jpg">
+	<meta property="og:image" content="img/welcome.jpg">
 	@endif
 	
 	<meta property="og:site_name" content="RefoJunior">

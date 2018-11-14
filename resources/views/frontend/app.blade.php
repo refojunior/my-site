@@ -22,6 +22,7 @@
 @include('frontend.navbar')
 
 <!-- Contentnya -->
+
 @yield('content')
 
 <!-- Contact form -->

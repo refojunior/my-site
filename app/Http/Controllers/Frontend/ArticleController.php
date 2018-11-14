@@ -12,6 +12,7 @@ class ArticleController extends Controller
 {
     public function index(){
     	$data['articles'] = Article::orderBy('date', 'desc')->paginate(8);
+        $data['menu'] = 3;
     	return view('frontend.article.index', $data);
     }
 
@@ -20,6 +21,7 @@ class ArticleController extends Controller
     	$data['tags'] = Category::all();
     	$data['article'] = Article::where('title', $title)->first();
     	$data['articles'] = Article::orderBy('date', 'desc')->paginate(3);
+        $data['menu'] = 3;
     	return view('frontend.article.read', $data);
     }
 
@@ -40,6 +42,7 @@ class ArticleController extends Controller
         $keywords = $request->search;
         $data['keywords'] = $request->search;
         $data['articles'] = Article::where('title', 'like', '%'.$keywords.'%')->paginate(8);
+        $data['menu'] = 3;
         return view('frontend.article.search_article', $data);
     }
 }

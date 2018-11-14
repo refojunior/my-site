@@ -31,6 +31,9 @@ Route::get('backend/tags/search/{id}', 'TagController@search')->middleware('auth
 
 
 //HOME PAGE ROUTES
+Route::get('/contact', function(){
+	return view('frontend.contact-form');
+});
 
 Route::get('articles', 'Frontend\ArticleController@index')->name('articles');
 
@@ -39,3 +42,4 @@ Route::get('/{title}', 'Frontend\ArticleController@read')->name('articles.read')
 Route::get('articles/tags/{id}', 'Frontend\ArticleController@searchTags')->name('articles.tag');
 
 Route::get('articles/search', 'Frontend\ArticleController@searchArticle')->name('articles.search');
+

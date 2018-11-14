@@ -9,16 +9,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#">Home</a>
+                        <a class="nav-link js-scroll-trigger {{($menu==0 ? 'active' : '')}}" href="{{ URL('/') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#">Articles</a>
+                        <a class="nav-link js-scroll-trigger {{($menu==3 ? 'active' : '')}} " href="{{ URL('/articles') }}">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#">Contact</a>
+                        <a class="nav-link js-scroll-trigger" href="{{ URL('/contact') }}">Contact</a>
                     </li>
                     
                 </ul>
