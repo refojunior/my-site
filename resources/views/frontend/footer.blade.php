@@ -8,18 +8,18 @@
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://facebook.com/refojunior.f" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://instagram.com/refo_junior" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-youtube"></i>
+                <a href="https://github.com/refojunior" target="_blank">
+                  <i class="fab fa-github"></i>
                 </a>
               </li>
             </ul>

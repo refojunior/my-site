@@ -15,22 +15,22 @@
                             <div class="col-md-6">
                                 
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Your Name *" required name="name">
+                                    <input class="form-control" type="text" placeholder="Your Name *" required name="name" value="{{ old('name') }}">
                                     
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="telp" type="number" placeholder="Your Phone Number *">
-                                    <p class="help-block text-danger"></p>
+                                    <input class="form-control" name="telp" type="number" placeholder="Your Phone Number *" value="{{ old('telp') }}">
+                                   <!--  <p class="help-block text-danger"></p> -->
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" name="email" type="email" placeholder="Your email *" required>
+                                    <input class="form-control" name="email" type="email" placeholder="Your email *" required value="{{ old('email') }}">
                                     
                                 </div>
                       
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" placeholder="Your Message *" required="required"></textarea>
+                                    <textarea class="form-control" name="message" placeholder="Your Message *" required value="{{ old('message') }}"></textarea>
                                     
                                 </div>
                             </div>

@@ -181,11 +181,11 @@ Welcome
 			</div>
 		</div>
 		<br>
-		<div class="row">
+		{{-- <div class="row">
 			<div class="col-md-3 mx-auto" align="center">
 				<button class="btn btn-block btn-outline-danger">See More</button>
 			</div>
-		</div>
+		</div> --}}
 	</div>
 </section>
 <br><br>
