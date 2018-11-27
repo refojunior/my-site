@@ -276,12 +276,9 @@ header.masthead .device-container .screen img {
     transition: all ease 0.5s
 	}
 
-  .right-menu:hover {
-    margin-left:0px;
-  }
-
   .right-menu:hover p {
     color:#e74c3c;
+    transition: all ease 0.5s
   }
 /*
 	.right-menu ul li a{

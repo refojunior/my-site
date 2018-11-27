@@ -21,6 +21,7 @@ class ContactMail extends Mailable
     public $fromMail;
     public $nameMail;
     public $telpMail;
+    //public $fromSubject;
 
     public function __construct($messageMail, $fromMail, $nameMail, $telpMail)
     {
@@ -28,6 +29,7 @@ class ContactMail extends Mailable
         $this->fromMail = $fromMail;
         $this->nameMail = $nameMail;
         $this->telpMail = $telpMail;
+        //$this->fromSubject = $fromSubject;
     }
 
     /**
