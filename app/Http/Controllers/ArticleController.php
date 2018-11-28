@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function index()
     {
         $data['menu'] = 3;
-        $data['articles'] = Article::paginate(8);
+        $data['articles'] = Article::orderBy('date', 'desc')->paginate(8);
         return view('backend.article.index', $data);
     }
 

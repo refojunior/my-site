@@ -20,8 +20,8 @@ class ArticleController extends Controller
     	$title = ucwords(str_replace("-", " ", $title));
     	$data['tags'] = Category::all();
     	$data['article'] = Article::where('title', $title)->first();
-    	$data['articles'] = Article::orderBy('date', 'desc')->paginate(3);
-        $data['random'] = Article::inRandomOrder()->get();
+    	$data['new_articles'] = Article::orderBy('date', 'desc')->paginate(3);
+        $data['right_articles'] = Article::inRandomOrder()->paginate(4);
         $data['menu'] = 3;
     	return view('frontend.article.read', $data);
     }

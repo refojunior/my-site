@@ -50,11 +50,11 @@
 				<div class="col-md-4" id="right-menu">
 					<div class="row">
 						<div class="col-md-12">
-							<h2>Artikel Terbaru : </h2>
+							<h2>Baca Juga : </h2>
 						</div>
 					</div>
 					
-					@foreach($articles as $row)
+					@foreach($right_articles as $row)
 					<div class="row right-menu">
 						<div class="col-md-5">
 							<a href="{{ route('articles.read', ['title' => linkTitle($row->title) ]) }}" class="thumbs-link">
@@ -100,12 +100,12 @@
 		<br><br>
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Baca Juga</h2>
+				<h2>Artikel Terbaru : </h2>
 				<hr>
 			</div>
 		</div>
 		<div class="row">
-			@foreach($random as $randArticle)
+			@foreach($new_articles as $randArticle)
 			<div class="col-md-4">
 	        	<a href="{{ route('articles.read', ['title' => linkTitle($randArticle->title) ]) }}" class="thumbs-link">
 					<img src="{{ asset('storage/cover/resize/'.$randArticle->cover) }}" alt="{{ $randArticle->cover }}" class="img-fluid my-thumbnail" style="margin-bottom: 0">

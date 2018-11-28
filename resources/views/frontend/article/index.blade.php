@@ -43,7 +43,8 @@ My Articles
 	        			</p>
 	        			<br>
 	        		</div>
-	        	</div>
+				</div>
+				<br>
 	        </div>
 	        @endforeach
 		</div>
