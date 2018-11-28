@@ -2,6 +2,7 @@
 //Helper ini sangat berguna cuy..
 use Illuminate\Support\Facades\DB;
 use App\Tag;
+use App\Article;
 
 function cek_helper(){
     return "Call From Helpers";
@@ -98,6 +99,15 @@ function linkTitle($title){
     $replace = str_replace(" ", "-", $lower);
     return $replace;
 }
+
+function updateClicks($article_id){
+    $article = Article::find($article_id);
+    $article->clicks += 1;
+    Article::where('id', $article_id)->update([
+        'clicks' => $article->clicks
+    ]);
+}
+
 
 
 ?>

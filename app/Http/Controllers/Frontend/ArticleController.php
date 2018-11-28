@@ -17,9 +17,10 @@ class ArticleController extends Controller
     }
 
     public function read($title){
-    	$title = ucwords(str_replace("-", " ", $title));
+        $title = ucwords(str_replace("-", " ", $title));
+        $data['article'] = Article::where('title', $title)->first();
+        updateClicks($data['article']->id);
     	$data['tags'] = Category::all();
-    	$data['article'] = Article::where('title', $title)->first();
     	$data['new_articles'] = Article::orderBy('date', 'desc')->paginate(3);
         $data['right_articles'] = Article::inRandomOrder()->paginate(4);
         $data['menu'] = 3;
