@@ -12,6 +12,9 @@
 
 @section('content')
 
+
+
+
 <section id="article">
 	<div class="body-read-article">
 		<div class="container">
@@ -42,6 +45,33 @@
 							@foreach(searchSelectedTag($article->id) as $tags)
 								<a href="{{ route('articles.tag', ['id' => $tags->category_id ]) }}" class="tags">{{ $tags->name }}</a>
 							@endforeach
+							<br><br>
+							<strong>Bagikan : </strong>
+							<div class="share-button">
+								<!-- SHARE BUTTON FB -->
+								<div id="share-fb" class="fb-share-button" data-href="" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+									<a id="link-share-fb" href="" class="fb-xfbml-parse-ignore" class="btn-fb" onclick="return !window.open(this.href, 'Facebook', 'width=640, height=560')"> 
+										<span class="fa-stack fa-1x">
+											<i class="fas fa-circle fa-stack-2x" style="color:#3C63B0"></i>
+											<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+										</span>
+									</a> 
+								</div>
+								<!-- SHARE BUTTON TWITTER -->
+								<a class="twitter-share-button" target="_blank" id="tweet-link"
+								href="">
+								<span class="fa-stack fa-1x">
+									<i class="fas fa-circle fa-stack-2x" style="color:#33BAF0"></i>
+									<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+								
+							</div>
+							
+
+							<!-- SHARE WHATSAPP -->
+							
+
 						</div>
 					</div>
 					<br>
@@ -74,6 +104,7 @@
 		</div>
 	</div>
 </section>
+
 
 <!-- COMMENT -->
 <section>
@@ -137,6 +168,18 @@ if(width < 992) {
   col.classList.remove("col-md-8");
   col.classList.add("col-md-12");
 }
+
+//SHARE BUTTON
+var link = document.URL;
+//twitter
+var tweet = document.getElementById('tweet-link').href = "https://twitter.com/intent/tweet?text=Cek Artikel ini "+ link;
+
+//fb
+var segment = link.split("/");
+var link = document.getElementById('link-share-fb').href = "https://www.facebook.com/sharer/sharer.php?app_id=140351823309332&u=https%3A%2F%2F"+ segment[2] + "/" + segment[3] +"%2F&display=popup";
+var url = $('#share-fb').data('data-href', url);
+//console.log(document.getElementById('link-share-fb'));
+
 
 </script>
 

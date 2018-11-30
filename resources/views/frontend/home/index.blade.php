@@ -15,7 +15,7 @@ Welcome
 				<div class="header-content">
 					<h1>Welcome to My Site</h1>
 					<hr>
-					<p class="text-box">Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion. My dream is become a professional software engineer. </p>
+					<p class="text-box">Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion. </p>
 				</div>
 			</div>
 			
