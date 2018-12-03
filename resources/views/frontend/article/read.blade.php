@@ -177,7 +177,7 @@ var tweet = document.getElementById('tweet-link').href = "https://twitter.com/in
 //fb
 var segment = link.split("/");
 var link = document.getElementById('link-share-fb').href = "https://www.facebook.com/sharer/sharer.php?app_id=140351823309332&u=https%3A%2F%2F"+ segment[2] + "/" + segment[3] +"%2F&display=popup";
-var url = $('#share-fb').data('data-href', url);
+var url = $('#share-fb').data('data-href', link);
 //console.log(document.getElementById('link-share-fb'));
 
 

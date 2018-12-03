@@ -3,6 +3,7 @@
 	<meta name="description" content="{{ substr($article->excerpt, 0, 250) }}"/>
 	<meta property="og:description" content="{{ substr($article->excerpt, 0, 250) }}"/>
 	<meta name="twitter:description" content="{{ substr($article->excerpt, 0, 250) }}"/>
+	<meta property="og:title" content="{{ $article->title }} | Refo Junior">
 	@else
 	<meta name="description" content="Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion."/>
 	<meta property="og:description" content="Hello my name is Refo Junior, i'm a website developer based in Denpasar, Bali. I'm a Student at STMIK STIKOM Bali. I really love to make a website and other software engineering, because this is my passion."/>
@@ -20,7 +21,7 @@
 	@endif
 	
 	<meta property="og:site_name" content="RefoJunior">
-	<meta property="og:url" content="https://refojunior.com"/>
+	{{-- <meta property="og:url" content="https://refojunior.com"/> --}}
 	
 	
 	<meta property="og:locale" content="id_ID"/>

@@ -152,7 +152,7 @@ header.masthead .header-content {
   background-color: white;
   opacity: 0.7;
   padding:15px;
-  float:right; display: none
+  float:right; 
 }
 
 header.masthead .header-content .text-box {
@@ -280,15 +280,37 @@ header.masthead .device-container .screen img {
     color:#e74c3c;
     transition: all ease 0.5s
   }
-/*
-	.right-menu ul li a{
-		color: #F1423B;
-		font-size:15px;
-	}
-	.right-menu ul li a:hover{
-		color: #222;
-		text-decoration: none;
-	}*/
+  .progress{
+    height: 20px;
+    line-height: 15px;
+    border-radius: 5px;
+    background: #f0f0f0;
+    margin-bottom: 30px;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.progress-bar{
+    position: relative;
+    border-radius: 0;
+    opacity: 0;
+}
+
+.progress .progress-value{
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+
+@-webkit-keyframes animate-positive{
+    0% { width: 0%; }
+}
+@keyframes animate-positive{
+    0% { width: 0%; }
+}
 
 }
 
@@ -345,37 +367,7 @@ header.masthead .device-container .screen img {
   padding-bottom: 10px;
 }
 
-.progress{
-    height: 20px;
-    line-height: 15px;
-    border-radius: 5px;
-    background: #f0f0f0;
-    margin-bottom: 30px;
-    box-shadow: none;
-    overflow: visible;
-}
 
-.progress-bar{
-    position: relative;
-    border-radius: 0;
-    opacity: 0;
-}
-
-.progress .progress-value{
-    display: block;
-    font-size: 13px;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 8px;
-}
-
-@-webkit-keyframes animate-positive{
-    0% { width: 0%; }
-}
-@keyframes animate-positive{
-    0% { width: 0%; }
-}
 
 #portfolio .portfolio-item {
   right: 0;

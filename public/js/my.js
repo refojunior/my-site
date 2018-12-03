@@ -32,8 +32,7 @@ $(document).ready(function() {
   
   });
 
-  //slide down
-  $(".header-content").slideDown(1200);
+  
       
 });
 

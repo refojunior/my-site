@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <!-- my custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/my-style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/my-style.css?v=2')}}">
     @include('frontend.meta')
 </head>
 
